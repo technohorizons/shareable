@@ -8,7 +8,7 @@ in the providers array
 ```
 App\Modules\ModulesServiceProvider::class
 ```
-## table
+## Table
 In this module there is working with one table called user_review. Table structre is given below
 
 ```
@@ -28,3 +28,21 @@ public function getUser() {
         return $this->hasOne('<User Model>','id','from_user_id');
     }
 ```
+
+## Show Review Section In View
+
+In view add the following code where you want to show the review form btn. 
+```
+        <script src="{{ URL::asset('assets/js/review.js') }}" async data-baseUrl="{{ URL::to('/') }}" data-action="form" data-review-param="1" ></script>
+```
+
+in this script there is three attribute extra attribute
+```
+data-baseUrl - for base Url to request and response from controller
+data-action - there is two value for this 
+1. form  // to show the form btn
+2. list  // to show the review list btn
+data-review-param - id of user 
+```
+
+
