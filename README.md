@@ -1,4 +1,4 @@
-# sharebee
+# Sharebee
 sharebee is a laravel review module
 
 ## Installation
@@ -33,7 +33,7 @@ public function getUser() {
 
 In view add the following code where you want to show the review form btn. 
 ```
-        <script src="{{ URL::asset('assets/js/review.js') }}" async data-baseUrl="{{ URL::to('/') }}" data-action="form" data-review-param="1" ></script>
+ <script src="{{ URL::asset('assets/js/review.js') }}" async data-baseUrl="{{ URL::to('/') }}" data-action="form" data-review-param="1" ></script>
 ```
 
 in this script there is three attribute extra attribute
@@ -45,4 +45,16 @@ data-action - there is two value for this
 data-review-param - id of user 
 ```
 
+# Save review
+In review controller there is function:
+```
+public function postAdd() {
+        $InputAll = Request::input();
+        $InputAll['from_user_id'] = 2; //current user session id
+        Review::create($InputAll);
+        return response()->json([ 'status' => 'success']);
+}
+```
 
+to_user_id will be specified by script tag.
+Thanks
