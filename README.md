@@ -45,7 +45,7 @@ data-action - there is two value for this
 data-review-param - id of user 
 ```
 
-# Save review
+# Save Review
 In review controller there is function:
 ```
 public function postAdd() {
