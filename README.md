@@ -38,11 +38,11 @@ In view add the following code where you want to show the review form btn.
 
 in this script there is three attribute extra attribute
 ```
-**data-baseUrl** - for base Url to request and response from controller
-**data-action** - there is two value for this 
+data-baseUrl - for base Url to request and response from controller
+data-action - there is two value for this 
 1. form  // to show the form btn
 2. list  // to show the review list btn
-**data-review-param** - id of user 
+data-review-param - id of user 
 ```
 
 # Save Review
