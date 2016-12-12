@@ -1,5 +1,5 @@
 # Sharebee
-sharebee is a laravel review module
+Sharebee is a laravel 5.2 review module
 
 ## Installation
 Download this repository and paste into your laravel root folder and add the following line to this file <root folder> **config/app.php**
@@ -22,7 +22,7 @@ updated_at
 deleted_at
 ```
 
-In this table **from_user_id** and **to_user_id** is linked with user table and you have to setup connectivity with it to show the review otherwise it will show demo name and image. According to me, you may setup connectivity by adding following line to the review model save in above modules folder.
+In this table **from_user_id** and **to_user_id** is linked with user table and you have to setup relationship with user table with it to show the review otherwise it will show demo name and image. According to me, you may setup relationship with user table  by adding following line to the review model save in above modules folder.
 ```
 public function getUser() {
         return $this->hasOne('<User Model>','id','from_user_id');
@@ -38,11 +38,11 @@ In view add the following code where you want to show the review form btn.
 
 in this script there is three attribute extra attribute
 ```
-data-baseUrl - for base Url to request and response from controller
-data-action - there is two value for this 
+**data-baseUrl** - for base Url to request and response from controller
+**data-action** - there is two value for this 
 1. form  // to show the form btn
 2. list  // to show the review list btn
-data-review-param - id of user 
+**data-review-param** - id of user 
 ```
 
 # Save Review
@@ -56,8 +56,8 @@ public function postAdd() {
 }
 ```
 
-to_user_id will be specified by script tag.
+**to_user_id** will be specified by script tag.
 
 ## Requirment
-Your project should have jquery and bootstrap css and js file to run the project perfectly.
+Your project should have **jquery** and **bootstrap css** and **js** file to run the project perfectly.
 Thanks
