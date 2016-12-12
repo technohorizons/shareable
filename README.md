@@ -57,4 +57,7 @@ public function postAdd() {
 ```
 
 to_user_id will be specified by script tag.
+
+## Requirment
+Your project should have jquery and bootstrap css and js file to run the project perfectly.
 Thanks
