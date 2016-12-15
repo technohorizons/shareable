@@ -33,16 +33,21 @@ public function getUser() {
 
 In view add the following code where you want to show the review form btn. 
 ```
- <script src="{{ URL::asset('assets/js/review.js') }}" async data-baseUrl="{{ URL::to('/') }}" data-action="form" data-review-param="1" ></script>
+ <script src="{{ URL::asset('assets/js/review.min.js') }}" async data-baseUrl="{{ URL::to('/') }}"  data-review-param="1" ></script>
 ```
 
-in this script there is three attribute extra attribute
+in this script there is two extra attributes
 ```
 data-baseUrl - for base Url to request and response from controller
-data-action - there is two value for this 
-1. form  // to show the form btn
-2. list  // to show the review list btn
 data-review-param - id of user 
+```
+To Show the Review form button paste the below code at place where you want form button
+```
+ <div id="review-form-btn"></div>
+```
+To Show the Review List paste the below code at place where you want list button
+```
+<div id="review-list-btn"></div>
 ```
 
 # Save Review
