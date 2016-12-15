@@ -31,7 +31,7 @@ public function getUser() {
 
 ## Show Review Section In View
 
-In view add the following code where you want to show the review form btn. 
+In view add the following code after all js files. 
 ```
  <script src="{{ URL::asset('assets/js/review.min.js') }}" async data-baseUrl="{{ URL::to('/') }}"  data-review-param="1" ></script>
 ```
